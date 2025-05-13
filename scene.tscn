@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://boko4kuxnmiwu" path="res://data_container.png" id="4_u3cyc"]
 [ext_resource type="Script" uid="uid://ccvh7vd6vs0yy" path="res://delete_menu.gd" id="6_ni31j"]
 [ext_resource type="Texture2D" uid="uid://dsh1vp10hheqd" path="res://data_container_green.png" id="6_y2354"]
-[ext_resource type="Script" uid="uid://4r2gf40jqm76" path="res://edit_entry_display.gd" id="7_73fnb"]
+[ext_resource type="Script" path="res://edit_entry_display.gd" id="7_73fnb"]
 [ext_resource type="Script" uid="uid://72h0upbcrqpj" path="res://data_entry_menu.gd" id="8_xlvrw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxogm"]
@@ -461,7 +461,7 @@ offset_right = -30.0
 offset_bottom = -28.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Enter Details"
+text = "Edit Details"
 label_settings = SubResource("LabelSettings_3253y")
 horizontal_alignment = 1
 vertical_alignment = 1
