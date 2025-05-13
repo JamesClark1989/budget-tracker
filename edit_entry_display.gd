@@ -15,7 +15,6 @@ func setup(_name:String,_amount:String, _key:String):
 	name_line_edit.text = ""
 	amount_line_edit.text = ""
 	name_line_edit.placeholder_text = _name
-	print(_amount)
 	amount_line_edit.placeholder_text = _amount.replace("$", "")
 	key_value = _key
 
@@ -35,4 +34,4 @@ func _on_apply_pressed() -> void:
 	app.edit_entry(new_name,new_amount,key_value)
 	edit_entry_display.visible = false
 	main_display.visible = true
-	app.populate_data_container()
+	app.reformat_entries()
