@@ -88,6 +88,13 @@ func remove_all_data_buttons():
 	for child in data_v_box_container.get_children():
 		child.queue_free()
 
+func edit_entry(_name:String = "",_amount:float = 0.0,_key:String = ""):
+	if _name:
+		entries[_key]["name"] = _name
+	
+	if _amount > 0.0:
+		entries[_key]["amount"] = _amount
+
 func populate_data_container():	
 	remove_all_data_buttons()
 	total_price_label.text = str("$" + str(0))

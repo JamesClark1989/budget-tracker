@@ -4,6 +4,7 @@ extends Control
 
 @onready var main_display: Control = $"../Main_Display"
 @onready var data_entry_menu: Control = $"."
+@onready var edit_entry_display: Control = $"../Edit_Entry_Display"
 
 @onready var data_name: Label = $VBoxContainer/Name
 @onready var data_amount: Label = $VBoxContainer/Amount
@@ -24,3 +25,8 @@ func _on_delete_pressed() -> void:
 func _on_cancel_pressed() -> void:
 	data_entry_menu.visible = false
 	main_display.visible = true
+
+func _on_edit_pressed() -> void:
+	data_entry_menu.visible = false
+	edit_entry_display.setup(data_name.text, float(data_amount.text), key_number)
+	edit_entry_display.visible = true
