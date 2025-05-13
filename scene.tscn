@@ -200,7 +200,45 @@ offset_bottom = -29.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
-alignment = 1
+
+[node name="Exit_Entry_Button" type="Button" parent="Entry_Display/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_nxogm")
+flat = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Entry_Display/VBoxContainer/Exit_Entry_Button"]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture = ExtResource("2_m7jmp")
+region_rect = Rect2(0, 0, 100, 100)
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="Label" type="Label" parent="Entry_Display/VBoxContainer/Exit_Entry_Button/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 28.0
+offset_right = -30.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "X"
+label_settings = SubResource("LabelSettings_3253y")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Detail_Entry" type="NinePatchRect" parent="Entry_Display/VBoxContainer"]
 texture_filter = 1
@@ -526,6 +564,7 @@ vertical_alignment = 1
 [connection signal="pressed" from="Main_Display/Delete_Data_Button" to="." method="_on_delete_data_button_pressed"]
 [connection signal="pressed" from="Main_Display/VBoxContainer/Create_New_Button" to="." method="_on_create_new_button_pressed"]
 [connection signal="visibility_changed" from="Entry_Display" to="Entry_Display" method="_on_visibility_changed"]
+[connection signal="pressed" from="Entry_Display/VBoxContainer/Exit_Entry_Button" to="Entry_Display" method="_on_exit_entry_button_pressed"]
 [connection signal="pressed" from="Entry_Display/VBoxContainer/Add" to="Entry_Display" method="_on_add_pressed"]
 [connection signal="pressed" from="Delete_Menu/VBoxContainer/No" to="Delete_Menu" method="_on_no_pressed"]
 [connection signal="pressed" from="Delete_Menu/VBoxContainer/Yes" to="Delete_Menu" method="_on_yes_pressed"]

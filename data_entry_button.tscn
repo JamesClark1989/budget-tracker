@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsg26f3xb16ym"]
+[gd_scene load_steps=6 format=3 uid="uid://dsg26f3xb16ym"]
 
 [ext_resource type="Script" uid="uid://d1erf6m0nt6nf" path="res://data_entry_button.gd" id="1_gnp57"]
 [ext_resource type="Texture2D" uid="uid://boko4kuxnmiwu" path="res://data_container.png" id="1_wrkwh"]
@@ -8,6 +8,9 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3253y"]
 font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_gnp57"]
+font_size = 25
 
 [node name="Data_Button" type="Button"]
 custom_minimum_size = Vector2(0, 120)
@@ -47,11 +50,21 @@ grow_vertical = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="name_label" type="Label" parent="NinePatchRect/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/HBoxContainer"]
+layout_mode = 2
+
+[node name="name_label" type="Label" parent="NinePatchRect/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "Data"
 label_settings = SubResource("LabelSettings_3253y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="date_label" type="Label" parent="NinePatchRect/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+label_settings = SubResource("LabelSettings_gnp57")
 horizontal_alignment = 1
 vertical_alignment = 1
 

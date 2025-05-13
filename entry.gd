@@ -47,3 +47,10 @@ func _on_add_pressed() -> void:
 
 func _on_visibility_changed() -> void:
 	clear_text_edits()
+
+
+
+func _on_exit_entry_button_pressed() -> void:
+	print("NAH")
+	entry_display.visible = false
+	main_display.visible = true
