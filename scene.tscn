@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://boko4kuxnmiwu" path="res://data_container.png" id="4_u3cyc"]
 [ext_resource type="Script" uid="uid://ccvh7vd6vs0yy" path="res://delete_menu.gd" id="6_ni31j"]
 [ext_resource type="Texture2D" uid="uid://dsh1vp10hheqd" path="res://data_container_green.png" id="6_y2354"]
-[ext_resource type="Script" path="res://edit_entry_display.gd" id="7_73fnb"]
+[ext_resource type="Script" uid="uid://4r2gf40jqm76" path="res://edit_entry_display.gd" id="7_73fnb"]
 [ext_resource type="Script" uid="uid://72h0upbcrqpj" path="res://data_entry_menu.gd" id="8_xlvrw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxogm"]
@@ -846,8 +846,8 @@ vertical_alignment = 1
 [connection signal="visibility_changed" from="Entry_Display" to="Entry_Display" method="_on_visibility_changed"]
 [connection signal="pressed" from="Entry_Display/VBoxContainer/Exit_Entry_Button" to="Entry_Display" method="_on_exit_entry_button_pressed"]
 [connection signal="pressed" from="Entry_Display/VBoxContainer/Add" to="Entry_Display" method="_on_add_pressed"]
-[connection signal="visibility_changed" from="Edit_Entry_Display" to="Edit_Entry_Display" method="_on_visibility_changed"]
 [connection signal="pressed" from="Edit_Entry_Display/VBoxContainer/Exit_Entry_Button" to="Edit_Entry_Display" method="_on_exit_entry_button_pressed"]
+[connection signal="visibility_changed" from="Edit_Entry_Display/VBoxContainer/Detail_Entry/Label" to="Edit_Entry_Display" method="_on_label_visibility_changed"]
 [connection signal="pressed" from="Edit_Entry_Display/VBoxContainer/Apply" to="Edit_Entry_Display" method="_on_apply_pressed"]
 [connection signal="pressed" from="Delete_Menu/VBoxContainer/No" to="Delete_Menu" method="_on_no_pressed"]
 [connection signal="pressed" from="Delete_Menu/VBoxContainer/Yes" to="Delete_Menu" method="_on_yes_pressed"]

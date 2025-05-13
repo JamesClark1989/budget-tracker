@@ -10,14 +10,6 @@ extends Control
 @onready var main_display: Control = $"../Main_Display"
 @onready var entry_display: Control = $"."
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func clear_text_edits():
 	name_line_edit.text = ""
@@ -46,11 +38,9 @@ func _on_add_pressed() -> void:
 	main_display.visible = true
 
 func _on_visibility_changed() -> void:
-	clear_text_edits()
-
-
+	if visible == false:
+		clear_text_edits()
 
 func _on_exit_entry_button_pressed() -> void:
-	print("NAH")
 	entry_display.visible = false
 	main_display.visible = true

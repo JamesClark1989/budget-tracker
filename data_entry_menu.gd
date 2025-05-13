@@ -28,5 +28,5 @@ func _on_cancel_pressed() -> void:
 
 func _on_edit_pressed() -> void:
 	data_entry_menu.visible = false
-	edit_entry_display.setup(data_name.text, float(data_amount.text), key_number)
 	edit_entry_display.visible = true
+	edit_entry_display.setup(data_name.text, data_amount.text, key_number)

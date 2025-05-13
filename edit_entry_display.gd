@@ -11,11 +11,13 @@ var key_value : String
 @onready var edit_entry_display: Control = $"."
 
 
-func setup(_name:String,_amount:float, _key:String):
+func setup(_name:String,_amount:String, _key:String):
+	name_line_edit.text = ""
+	amount_line_edit.text = ""
 	name_line_edit.placeholder_text = _name
-	amount_line_edit.placeholder_text = str(_amount)
+	print(_amount)
+	amount_line_edit.placeholder_text = _amount.replace("$", "")
 	key_value = _key
-
 
 
 func _on_exit_entry_button_pressed() -> void:
