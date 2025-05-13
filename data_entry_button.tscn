@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsg26f3xb16ym"]
+
+[ext_resource type="Script" uid="uid://d1erf6m0nt6nf" path="res://data_entry_button.gd" id="1_gnp57"]
+[ext_resource type="Texture2D" uid="uid://boko4kuxnmiwu" path="res://data_container.png" id="1_wrkwh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxogm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3253y"]
+font_size = 40
+
+[node name="Data_Button" type="Button"]
+custom_minimum_size = Vector2(0, 120)
+offset_bottom = 120.0
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_nxogm")
+flat = true
+script = ExtResource("1_gnp57")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wrkwh")
+region_rect = Rect2(0, 0, 100, 100)
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 23.0
+offset_right = -27.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="name_label" type="Label" parent="NinePatchRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Data"
+label_settings = SubResource("LabelSettings_3253y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="amount_label" type="Label" parent="NinePatchRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Data"
+label_settings = SubResource("LabelSettings_3253y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
