@@ -13,13 +13,17 @@ config_version=5
 config/name="budget tracker app"
 run/main_scene="uid://c2gx7ywnxippb"
 config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/show_image=false
 config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=648
 window/size/viewport_height=1152
+window/stretch/mode="canvas_items"
+window/handheld/orientation=1
 
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
