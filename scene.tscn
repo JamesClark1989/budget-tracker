@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://c2gx7ywnxippb"]
+[gd_scene load_steps=19 format=3 uid="uid://c2gx7ywnxippb"]
 
 [ext_resource type="Script" uid="uid://d067oysvmrium" path="res://app_manager.gd" id="1_3253y"]
 [ext_resource type="Texture2D" uid="uid://bsjo8v5tr55fw" path="res://button.png" id="1_ulcgi"]
 [ext_resource type="Texture2D" uid="uid://b3pew5o6b1jv4" path="res://delete_container.png" id="2_m7jmp"]
 [ext_resource type="Script" uid="uid://d3h6b00ggjkbg" path="res://entry.gd" id="3_3253y"]
+[ext_resource type="Script" uid="uid://dpdkfc8xes8qq" path="res://scroll_container.gd" id="4_5juve"]
 [ext_resource type="Texture2D" uid="uid://boko4kuxnmiwu" path="res://data_container.png" id="4_u3cyc"]
 [ext_resource type="Script" uid="uid://ccvh7vd6vs0yy" path="res://delete_menu.gd" id="6_ni31j"]
 [ext_resource type="Texture2D" uid="uid://dsh1vp10hheqd" path="res://data_container_green.png" id="6_y2354"]
@@ -171,6 +172,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
+script = ExtResource("4_5juve")
 
 [node name="DataVBoxContainer" type="VBoxContainer" parent="Main_Display/VBoxContainer/ScrollContainer"]
 custom_minimum_size = Vector2(400, 800)
